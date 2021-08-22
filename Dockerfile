@@ -4,7 +4,7 @@ WORKDIR /root
 
 RUN apk update && apk add git \
     && git clone https://github.com/iyear/E5SubBot.git \
-    && cd E5SubBot && go build
+    && cd E5SubBot && go build && mv E5SubBot main
 
 FROM alpine:latest
 
